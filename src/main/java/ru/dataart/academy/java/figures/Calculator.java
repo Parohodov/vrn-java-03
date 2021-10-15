@@ -4,11 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
-    private static final int INIT_FIGURES_NUM = 0xFF;
-
-    private int figuresCounter = 0;
-    private Figure[] figures = new Figure[INIT_FIGURES_NUM];
-    private List<Figure> figureList = new ArrayList<>();
+//    private static final int INIT_FIGURES_NUM = 0xFF;
+//    private int figuresCounter = 0;
+//    private Figure[] figures = new Figure[INIT_FIGURES_NUM];
+//    private List<Figure> figureList = new ArrayList<>();
 
     public double calcAreas(Figure[] figures) {
         double area = 0;
@@ -20,7 +19,7 @@ public class Calculator {
 
     public double calcAreas(List<Figure> figureList) {
         double area = 0;
-        for(Figure figure: figures) {
+        for(Figure figure: figureList) {
             area += figure.calcArea();
         }
         return area;
@@ -34,35 +33,35 @@ public class Calculator {
         return perimeter;
     }
 
-    public double calcPerimeters(List<Figure> figures) {
+    public double calcPerimeters(List<Figure> figureList) {
         double perimeter = 0;
-        for(Figure figure: figures) {
+        for(Figure figure: figureList) {
             perimeter += figure.calcPerimeter();
         }
         return perimeter;
     }
 
-    public double calcAreas() {
-        if (figuresCounter == 0) {
-            return 0;
-        }
-        double area = 0;
-        for (Figure figure: figures) {
-            area += figure.calcArea();
-        }
-        return 0;
-    }
+//    public double calcAreas() {
+//        if (figuresCounter == 0) {
+//            return 0;
+//        }
+//        double area = 0;
+//        for (Figure figure: figures) {
+//            area += figure.calcArea();
+//        }
+//        return 0;
+//    }
 
-    public void addFigure(Figure figure) {
-        if (figure == null) {
-            return;
-        }
-        figures[figuresCounter++] = figure;
-        figureList.add(figure);
-    }
-
-    public void cleanFigures() {
-        figuresCounter = 0;
-        figureList.clear();
-    }
+//    public void addFigure(Figure figure) {
+//        if (figure == null) {
+//            return;
+//        }
+//        figures[figuresCounter++] = figure;
+//        figureList.add(figure);
+//    }
+//
+//    public void cleanFigures() {
+//        figuresCounter = 0;
+//        figureList.clear();
+//    }
 }
