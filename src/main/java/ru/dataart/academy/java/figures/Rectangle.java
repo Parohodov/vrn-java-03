@@ -18,4 +18,9 @@ public class Rectangle extends Figure {
     public double calcPerimeter() {
         return 2 * (base + height);
     }
+
+    @Override
+    public String toString() {
+        return String.format("Rectangle, base = %.2f, height = %.2f", base, height);
+    }
 }

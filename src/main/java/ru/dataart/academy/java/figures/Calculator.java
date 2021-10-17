@@ -1,6 +1,6 @@
 package ru.dataart.academy.java.figures;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {

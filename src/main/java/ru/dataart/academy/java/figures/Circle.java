@@ -16,4 +16,9 @@ public class Circle extends Figure {
     public double calcPerimeter() {
         return 2 * Math.PI * radius;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Circle, radius = %.2f", radius);
+    }
 }
